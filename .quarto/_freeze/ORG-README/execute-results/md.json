@@ -1,0 +1,15 @@
+{
+  "hash": "55d18ee10daa2f967cd9c19421df94e2",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: gfm\nwrap: preserve\nexecute:\n  echo: false\n  warning: false\n---\n\n\n\n# Monash Quarto Templates\n\nThe `quarto-monash` organization collects a curated set of templates for using Quarto at Monash University.\n\nUse a template with the command:\n\n`quarto use template quarto-monash/<template-name>`\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n\n|Template                                                                     |Name         |Install                                          |\n|:----------------------------------------------------------------------------|:------------|:------------------------------------------------|\n|Monash letterhead                                                            |[letter](https://github.com/quarto-monash/letter)|`quarto use template quarto-monash/letter`       |\n|Monash memo                                                                  |[memo](https://github.com/quarto-monash/memo)|`quarto use template quarto-monash/memo`         |\n|Unofficial Monash University-themed Beamer and RevealJS Extension for Quarto |[presentation](https://github.com/quarto-monash/presentation)|`quarto use template quarto-monash/presentation` |\n|Monash consulting report                                                     |[report](https://github.com/quarto-monash/report)|`quarto use template quarto-monash/report`       |\n|a Monash University thesis                                                   |[thesis](https://github.com/quarto-monash/thesis)|`quarto use template quarto-monash/thesis`       |\n|Monash working paper                                                         |[workingpaper](https://github.com/quarto-monash/workingpaper)|`quarto use template quarto-monash/workingpaper` |\n\n\n:::\n:::\n\n\n\n### Using a Template\n\nThese templates require features in Quarto 1.4, so you will need to download [a recent version of Quarto](https://quarto.org/docs/download/).\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}

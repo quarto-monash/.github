@@ -1,0 +1,54 @@
+on:
+  push:
+    paths: ['ORG-README.qmd']
+  workflow_dispatch:
+  schedule: 
+    - cron: '37 5 * * *'
+
+name: render-readme
+
+jobs:
+  render-readme:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: false
+
+      - uses: r-lib/actions/setup-r@v2
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          dependencies: NA
+          packages: |
+            any::sessioninfo
+            rmarkdown
+            gh
+            purrr
+            dplyr
+            glue
+
+      - name: Render with Quarto
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          path: ORG-README.qmd
+      
+      - name: Move and Rename to README.md
+        run: mv ORG-README.md profile/README.md
+      
+      - name: Commit Results
+        run: |
+          git config --local user.name 'github-actions[bot]'
+          git config --local user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit profile/README.md -m 'Re-build README.md' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"

@@ -1,0 +1,56 @@
+---
+format: gfm
+wrap: preserve
+execute:
+  echo: false
+  warning: false
+---
+
+# Monash Quarto Templates
+
+The `quarto-monash` organization collects a curated set of templates for using Quarto at Monash University.
+
+Use a template with the command:
+
+`quarto use template quarto-monash/<template-name>`
+
+```{r}
+#| message: false
+
+library(gh)
+library(purrr)
+library(dplyr)
+
+res <- gh::gh("/orgs/{org}/repos", org = "quarto-monash")
+
+tab <- res |>
+    # remove non extension
+    discard(~ .x$name %in% c(".github", "article-format-template")) |>
+    # remove private
+    discard(~ .x$private) |>
+    map_df(~ tibble::tibble(
+        name = .x$name,
+        full_name = .x$full_name,
+        description = .x$description,
+        license = .x$license$name,
+        url = .x$html_url
+    ))
+
+tab <- tab |> mutate(
+        template = gsub("^Quarto template for ?(.*)$", "\\1", description, perl = TRUE)
+    )
+
+tab_formatted <- tab |>
+    arrange(name) |>
+    transmute(
+        'Template' = template,
+        'Name' = glue::glue("[{name}]({url})"),
+        'Install' = glue::glue("`quarto use template {full_name}`")
+    )
+
+knitr::kable(tab_formatted)
+```
+
+### Using a Template
+
+These templates require features in Quarto 1.4, so you will need to download [a recent version of Quarto](https://quarto.org/docs/download/).
