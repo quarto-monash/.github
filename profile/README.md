@@ -2,7 +2,7 @@
 
 # Monash Quarto Templates
 
-The `quarto-monash` organization collects a curated set of templates for using Quarto at Monash University.
+The `quarto-monash` organization collects a curated set of templates for using Quarto at Monash University. Some templates are specific to the Department of Econometrics & Business Statistics.
 
 Use a template with the command:
 
