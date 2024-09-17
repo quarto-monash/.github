@@ -16,6 +16,7 @@ Use a template with the command:
 | Monash Business School consulting report | [report](https://github.com/quarto-monash/report) | `quarto use template quarto-monash/report` |
 | Monash University thesis | [thesis](https://github.com/quarto-monash/thesis) | `quarto use template quarto-monash/thesis` |
 | Monash University Department of Econometrics & Business Statistics working paper | [workingpaper](https://github.com/quarto-monash/workingpaper) | `quarto use template quarto-monash/workingpaper` |
+| Monash Business School exam | [workingpaper](https://github.com/quarto-monash/exam) | `quarto use template quarto-monash/exam` |
 
 ### Using a Template
 
