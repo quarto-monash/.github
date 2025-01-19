@@ -10,15 +10,11 @@ Use a template with the command:
 
 | Template | Name | Install |
 |:---|:---|:---|
-| NA | [exam](https://github.com/quarto-monash/exam) | `quarto use template quarto-monash/exam` |
+| Monash University exam | [exam](https://github.com/quarto-monash/exam) | `quarto use template quarto-monash/exam` |
 | Monash Business School letterhead | [letter](https://github.com/quarto-monash/letter) | `quarto use template quarto-monash/letter` |
 | Monash Business School memo | [memo](https://github.com/quarto-monash/memo) | `quarto use template quarto-monash/memo` |
 | Monash University themed Beamer and RevealJS presentations | [presentation](https://github.com/quarto-monash/presentation) | `quarto use template quarto-monash/presentation` |
 | Monash Business School consulting report | [report](https://github.com/quarto-monash/report) | `quarto use template quarto-monash/report` |
 | Monash University thesis | [thesis](https://github.com/quarto-monash/thesis) | `quarto use template quarto-monash/thesis` |
-| Unit website | [unit](https://github.com/quarto-monash/unit) | `quarto use template quarto-monash/unit` |
+| Monash University unit website | [unit](https://github.com/quarto-monash/unit) | `quarto use template quarto-monash/unit` |
 | Monash University Department of Econometrics & Business Statistics working paper | [workingpaper](https://github.com/quarto-monash/workingpaper) | `quarto use template quarto-monash/workingpaper` |
-
-### Using a Template
-
-These templates require features in Quarto 1.4, so you will need to download [a recent version of Quarto](https://quarto.org/docs/download/).
