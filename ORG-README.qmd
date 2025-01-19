@@ -50,7 +50,3 @@ tab_formatted <- tab |>
 
 knitr::kable(tab_formatted)
 ```
-
-### Using a Template
-
-These templates require features in Quarto 1.4, so you will need to download [a recent version of Quarto](https://quarto.org/docs/download/).
